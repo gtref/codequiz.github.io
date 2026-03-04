@@ -1,104 +1,153 @@
+/* Reset default margins and standardize sizing */
 * {
     box-sizing: border-box;
-}
-
-html {
-    font-size: 14px;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 30px auto;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    /* A soft, modern off-white/gray background */
+    background-color: #f3f4f6; 
+    color: #1f2937;
+    
+    /* Center everything vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
 
-    width: 80vw;
+.app-container {
+    width: 100%;
     max-width: 600px;
-    min-width: 300px;
-
-    background-color: antiquewhite;
-    color: black;
-
     text-align: center;
 }
 
+/* --- Header Styling --- */
+.quiz-header {
+    margin-bottom: 24px;
+}
+
 #title {
-    margin: 0 0 20px 0;
-
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "Source Code Pro", monospace;
-    font-weight: 400;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
 }
 
-#quiz {
-    border: 2px solid black;
-    border-radius: 20px;
-
-    padding: 20px 30px;
-
-    background-color: white;
+.subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    font-weight: 600;
 }
 
-#quiz-info,
-#question,
-#answers,
-#num-correct {
-    margin: 0 0 10px 0;
+/* --- Main Quiz Card --- */
+.quiz-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    /* Soft, modern shadow instead of a hard border */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+    padding: 32px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
 }
 
-.small {
-    color: #444444;
-
-    font-size: 0.8rem;
-    font-style: italic;
+.progress-text {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 #question {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.5;
 }
 
+/* --- Answer Buttons --- */
 #answers {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .answer {
     width: 100%;
-    min-height: 2rem;
-    height: auto;
-
-    border: 2px solid black;
-    border-radius: 6px;
-
-    background-image: linear-gradient(#ffffff, #dadada);
-
-    font-family: inherit;
-    font-size: 0.9rem;
-}
-
-#submit {
-    width: 100px;
-    height: 2.2rem;
-
-    border: 2px solid black;
-    border-radius: 1.1rem;
-
-    background-image: linear-gradient(#dc143c, #b22222);
-    color: white;
-
+    padding: 14px 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #374151;
     font-family: inherit;
     font-size: 1rem;
+    font-weight: 500;
+    text-align: left; /* Align text to the left for better readability */
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-button:hover {
-    filter: brightness(90%);
+/* Smooth hover effect */
+.answer:hover {
+    border-color: #93c5fd;
+    background-color: #eff6ff;
 }
 
-button:active {
-    filter: brightness(80%);
+/* Push-down effect when clicked */
+.answer:active {
+    transform: scale(0.98);
 }
 
+/* The state added by your JavaScript when clicked */
 .selected {
-    background-image: linear-gradient(lemonchiffon, khaki);
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- Footer & Submit Button --- */
+.quiz-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.message-text {
+    font-size: 0.95rem;
+    color: #4b5563;
+    /* Prevents the layout from jumping when text appears/disappears */
+    min-height: 1.5rem; 
+}
+
+.btn-primary {
+    padding: 12px 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6; /* Modern primary blue */
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    box-shadow: 0 6px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px); /* Lifts the button slightly */
+}
+
+.btn-primary:active {
+    transform: translateY(1px); /* Pushes the button down */
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
 }
