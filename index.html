@@ -4,35 +4,51 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="[placeholder]" />
+    <meta name="description" content="Test your C and Python knowledge with this interactive programming quiz!" />
 
-    <title>Programming Quiz</title>
+    <title>C vs Python | Programming Quiz</title>
 
     <link rel="stylesheet" href="./style.css" />
 
-    <!-- "Open Sans" font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
 
-    <!-- "Fira Code" font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <h1 id="title">Programming Quiz</h1>
+    <div class="app-container">
+        
+        <header class="quiz-header">
+            <h1 id="title">💻 Programming Quiz</h1>
+            <p class="subtitle">C vs. Python Edition</p>
+        </header>
 
-    <main id="quiz">
-        <p id="top" class="small"></p>
-        <h2 id="question"></h2>
-        <div id="answers"></div>
-        <p id="bottom" class="small"></p>
-        <button id="submit""></button>
-    </main>
+        <main id="quiz" class="quiz-card">
+            
+            <div class="quiz-top-bar">
+                <p id="top" class="small progress-text"></p>
+            </div>
+            
+            <section class="question-container">
+                <h2 id="question">Loading quiz...</h2>
+            </section>
+
+            <section class="answers-container">
+                <div id="answers"></div>
+            </section>
+
+            <section class="quiz-footer">
+                <p id="bottom" class="small message-text"></p>
+                <button id="submit" class="btn-primary"></button>
+            </section>
+
+        </main>
+
+    </div>
 
     <script src="./script.js"></script>
 </body>
