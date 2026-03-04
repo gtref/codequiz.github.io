@@ -61,14 +61,15 @@
             "correct": [0, 2]
         },
         {
-            "question": "What does a Python file's name have to end with?",
+            "question": "What does a C file's name have to end with?",
             "answers": [
                 ".python",
                 ".p",
                 ".pn",
-                ".py"
+                ".py",
+                ".c"
             ],
-            "correct": [3]
+            "correct": [4]
         },
         {
             "question": "Who created Python?",
@@ -100,6 +101,15 @@
                 "dict()"
             ],
             "correct": [2, 3]
+        },
+        {
+             "question": "What function allows you to print to screen in C?",
+            "aunswers": [
+                "print",
+                "console.log",
+                "printf"
+            ],
+            "correct": [2]
         }
     ]
 }
