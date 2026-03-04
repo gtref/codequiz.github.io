@@ -1,115 +1,60 @@
 {
-    "questions": [
-        {
-            "question": "Which one is a string?",
-            "answers": [
-                "5",
-                "\"five\"",
-                "false",
-                "5.0"
-            ],
-            "correct": [1]
-        },
-        {
-            "question": "What number base do computers use?",
-            "answers": [
-                "hexadecimal (base 16)",
-                "decimal (base 10)",
-                "octal (base 8)",
-                "binary (base 2)"
-            ],
-            "correct": [3]
-        },
-        {
-            "question": "a and not b\nWhat variables must be true for this condition to be true?",
-            "answers": [
-                "a = true, b = true",
-                "a = true, b = false",
-                "a = false, b = true",
-                "a = false, b = false"
-            ],
-            "correct": [1]
-        },
-        {
-            "question": "Which one is a low-level programming language?",
-            "answers": [
-                "C#",
-                "Python",
-                "C",
-                "Ruby"
-            ],
-            "correct": [2]
-        },
-        {
-            "question": "int(input(\"How old are you?\")\nThis Python statement will raise an error. Why?",
-            "answers": [
-                "The statement is missing a bracket.",
-                "The string must be surrounded in single quotes.",
-                "The int() function cannot accept inputs.",
-                "The statement is missing a semicolon (;) at the end."
-            ],
-            "correct": [0]
-        },
-        {
-            "question": "[\"apple\", \"orange\", \"banana\", \"mango\", \"strawberry\"]\nWhich indices will return \"strawberry\"?",
-            "answers": [
-                "4",
-                "5",
-                "-1",
-                "\"strawberry\""
-            ],
-            "correct": [0, 2]
-        },
-        {
-            "question": "What does a C file's name have to end with?",
-            "answers": [
-                ".python",
-                ".p",
-                ".pn",
-                ".py",
-                ".c"
-            ],
-            "correct": [4]
-        },
-        {
-            "question": "Who created Python?",
-            "answers": [
-                "Tim Berners-Lee",
-                "Bjarne Stroustrup",
-                "Guido van Rossum",
-                "Mark Zuckerberg",
-                "Elon Musk"
-            ],
-            "correct": [2]
-        },
-        {
-            "question": "What symbol must be used at the start of a Python comment?",
-            "answers": [
-                "//",
-                "#",
-                "comment",
-                "->"
-            ],
-            "correct": [1]
-        },
-        {
-            "question": "What symbols are used to define dictionaries in Python?",
-            "answers": [
-                "[]",
-                "()",
-                "{}",
-                "dict()"
-            ],
-            "correct": [2, 3]
-        },
-        {
-             "question": "What function allows you to print to screen in C?",
-            "aunswers": [
-                "print",
-                "console.log",
-                "printf"
-            ],
-            "correct": [2]
-        }
-    ]
+  "quiz_title": "C and Python Fundamentals",
+  "questions": [
+    {
+      "question": "Which symbol is used to terminate statements in C, but is not required in Python?",
+      "answers": [":", ";", ".", "!"],
+      "correct_index": 1
+    },
+    {
+      "question": "In Python, how do you start a single-line comment?",
+      "answers": ["//", "/*", "#", "--"],
+      "correct_index": 2
+    },
+    {
+      "question": "Which function is used to output text to the console in C?",
+      "answers": ["print()", "printf()", "echo", "system.out"],
+      "correct_index": 1
+    },
+    {
+      "question": "What is the standard file extension for a Python script?",
+      "answers": [".c", ".py", ".h", ".exe"],
+      "correct_index": 1
+    },
+    {
+      "question": "Which language uses indentation (whitespace) to define code blocks instead of curly braces?",
+      "answers": ["C", "C++", "Python", "Java"],
+      "correct_index": 2
+    },
+    {
+      "question": "In C, which data type is used to store a single character?",
+      "answers": ["string", "int", "char", "float"],
+      "correct_index": 2
+    },
+    {
+      "question": "What is the index of the first element in both C arrays and Python lists?",
+      "answers": ["1", "-1", "0", "None"],
+      "correct_index": 2
+    },
+    {
+      "question": "Which of these is a valid Python list?",
+      "answers": ["{1, 2}", "(1, 2)", "[1, 2]", "<1, 2>"],
+      "correct_index": 2
+    },
+    {
+      "question": "Which language is 'statically typed' (you must declare variable types like 'int x')?",
+      "answers": ["Python", "C", "Both", "Neither"],
+      "correct_index": 1
+    },
+    {
+      "question": "Which function is the mandatory entry point for every C program?",
+      "answers": ["start()", "begin()", "main()", "init()"],
+      "correct_index": 2
+    },
+    {
+      "question": "In Python, which keyword is used to create a function?",
+      "answers": ["func", "void", "define", "def"],
+      "correct_index": 3
+    }
+  ]
 }
